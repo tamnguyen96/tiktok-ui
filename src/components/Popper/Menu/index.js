@@ -35,6 +35,7 @@ function Menu({ children, items = [], onChange = defaultFunction }) {
     <Tippy
       // visible
       interactive
+      offset={[12, 8]}
       onHide={() => {
         setMenuList(menuList.slice(0, 1));
       }}

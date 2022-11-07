@@ -49,6 +49,7 @@ function Search() {
 
   return (
     <HeadlessTippy
+      appendTo={() => document.body}
       visible={searchResult.length > 0 && showResult}
       interactive={true}
       onClickOutside={handleHideSearchResult}

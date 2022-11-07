@@ -13,7 +13,7 @@ const defaultFunction = () => {};
 function Menu({ children, items = [], onChange = defaultFunction }) {
   const [menuList, setMenuList] = useState([{ data: items, title: '' }]);
   const currentMenu = menuList[menuList.length - 1];
-  const renderItems2 = () => {
+  const renderItems = () => {
     return currentMenu.data.map((item, index) => {
       return (
         <MenuItem
@@ -52,7 +52,7 @@ function Menu({ children, items = [], onChange = defaultFunction }) {
                 }}
               />
             )}
-            {renderItems2()}
+            <div className={cx('menu-body')}>{renderItems()}</div>
           </PopperWrapper>
         </div>
       )}

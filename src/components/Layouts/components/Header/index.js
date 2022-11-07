@@ -101,7 +101,9 @@ function Header() {
         <div className={cx('logo')}>
           <img src={images.logo} alt="Tik Tok" />
         </div>
+
         <Search />
+
         <div className={cx('actions')}>
           {currentUser ? (
             <Fragment>
